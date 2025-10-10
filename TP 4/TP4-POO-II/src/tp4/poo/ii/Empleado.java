@@ -1,4 +1,5 @@
 package tp4.poo.ii;
+
 public class Empleado {
     private int id;
     private String nombre;

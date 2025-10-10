@@ -1,0 +1,29 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>110</x><y>150</y><w>210</w><h>210</h></coordinates><panel_attributes>Libro
+--
+-titulo: String
+-isbn: String
+-autor: Autor
+-editorial: Editorial
+--
++Libro(String, String, Editorial)
++getTitulo(): String
++getIsbn(): String
++getAutor(): Autor
++getEditorial(): Editorial
++setAutor(Autor): void
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>160</y><w>210</w><h>140</h></coordinates><panel_attributes>Autor
+--
+-nombre: String
+-nacionalidad: String
+--
++Autor(String, String)
++getNombre(): String
++getNacionalidad(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes>Editorial
+--
+-nombre: String
+-direccion: String
+--
++Editorial(String, String)
++getNombre(): String
++getDireccion(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>350</y><w>250</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;140;230;140</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>220</y><w>300</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>280;10;10;10</additional_attributes></element></diagram>

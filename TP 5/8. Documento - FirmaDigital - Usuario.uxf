@@ -1,0 +1,23 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>Text</id><coordinates><x>370</x><y>70</y><w>220</w><h>30</h></coordinates><panel_attributes>Documento - FirmaDigital - Usuario
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>130</y><w>300</w><h>190</h></coordinates><panel_attributes>Documento
+--
+-titulo: String
+-contenido: String
+-firmaDigital: FirmaDigital
+-usuario: Usuario
+--
++Documento(String,String,String,String, Usuario)
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>460</y><w>210</w><h>190</h></coordinates><panel_attributes>Usuario
+--
+-nombre: String
+-email: String
+--
++Usuario(String, String)
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>130</y><w>210</w><h>190</h></coordinates><panel_attributes>FirmaDigital
+--
+-codigoHash: String
+-fecha: String
+--
++FirmaDigital(String,String)
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>190</y><w>240</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;220;10</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>310</y><w>40</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element></diagram>
