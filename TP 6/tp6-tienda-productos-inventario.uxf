@@ -1,0 +1,57 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>Text</id><coordinates><x>370</x><y>30</y><w>230</w><h>30</h></coordinates><panel_attributes>TIENDA-PRODUCTO-INVENTARIO
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>500</y><w>230</w><h>150</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+CategoriaProducto
+--
+_+ALIMENTOS_
+_+ELECTRONICA_
+_+ROPA_
+_+HOGAR_
+_+OTROS_
+--
++getDescripcion(CategoriaProducto): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>130</y><w>290</w><h>210</h></coordinates><panel_attributes>Tienda
+--
+-inventario: Inventario
+--
++ Tienda(Inventario)
++ buscarProductoPorId(String): void
++ eliminarProducto(String): void
++ listarProductos(): void
++ filtrarPorCategoria(CategoriaProducto): void
++ actualizarStock(String, int): void
++ obtenerTotalStock(): void
++ mostrarProductoConMayorStock(): void
++ filtrarProductosPorPrecio(double, double): void
++ mostrarCategorias(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>490</y><w>210</w><h>180</h></coordinates><panel_attributes>Producto
+--
+-id: String 
+-nombre: String
+-precio: double
+-cantidad: int
+-categoriaProducto: CategoriaProducto 
+--
++Producto(String, String, double, int, CategoriaProducto)
++mostrarInfo(): void
++getId(): String
++getCategoriaProducto(): CategoriaProducto
++setCantidad(int): void
++getCantidad(): int
++getPrecio(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>550</y><w>380</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-categoriaProducto</panel_attributes><additional_attributes>10;20;360;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>130</y><w>420</w><h>210</h></coordinates><panel_attributes>Inventario
+--
+- productos: List&lt;Producto&gt;
+--
++ agregarProducto(Producto): boolean
++ listarProductos(): void
++ buscarProductoPorId(String): Producto
++ eliminarProducto(String): Producto
++ filtrarPorCategoria(CategoriaProducto): void
++ actualizarStock(String, int): Producto
++ obtenerTotalStock(): int
++ obtenerProductoConMayorStock(): List&lt;Producto&gt; {readOnly}
++ filtrarProductosPorPrecio(double, double): List&lt;Producto&gt; {readOnly}
++ mostrarCategoriasDisponibles(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>220</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-inventario</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>330</y><w>90</w><h>180</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+-productos</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element></diagram>
