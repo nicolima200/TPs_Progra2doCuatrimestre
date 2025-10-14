@@ -1,0 +1,38 @@
+<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><element><id>UMLClass</id><coordinates><x>153</x><y>48</y><w>312</w><h>252</h></coordinates><panel_attributes>Biblioteca
+--
+-nombre: String
+-libros: List&lt;Libro&gt;
+--
++Biblioteca(String, ArrayList&lt;Libro&gt;)
++agregarLibro(String, String,int, Autor): void
++listarLibros(): List&lt;Libro&gt;
++buscarLibroPorIsbn(String): Libro
++eliminarLibro(String): Libro
++obtenerCantidadLibros(): int
++filtrarLibrosPorAnio(int): List&lt;Libro&gt;
++mostrarAutoresDisponibles(): List&lt;Autor
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>645</x><y>48</y><w>252</w><h>228</h></coordinates><panel_attributes>Libro
+--
+-isbn: String
+-titulo: String
+-anioPublicacion: int
+-autor: Autor
+--
++Libro(String,String,int, Autor)
++getIsbn(): String
++getAnioPublicacion(): int
++getAutor(): Autor
++mostrarInfo(): void
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>645</x><y>444</y><w>252</w><h>180</h></coordinates><panel_attributes>Autor
+--
+-id: String
+-nombre: String
+-nacionalidad: String
+--
++Autor(String, String, String)
++mostrarInfo(): void
++getNombre(): String
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>453</x><y>132</y><w>216</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>753</x><y>264</y><w>48</w><h>204</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element></diagram>

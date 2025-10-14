@@ -1,0 +1,27 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Biblioteca
+--
+-nombre: String
+-libros: List&lt;Libro&gt;
+--
++agregarLibro(String, String,int, Autor): void
++listarLibros(): List&lt;Libro&gt;
++buscarLibroPorIsbn(String): Libro
++eliminarLibro(String): Libro
++obtenerCantidadLibros(): int
++filtrarLibrosPorAnio(int): List&lt;Libro&gt;
++mostrarAutoresDisponibles(): List&lt;Autor</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Libro
+--
+-isbn: String
+-titulo: String
+-anioPublicacion: int
+-autor: Autor
+--
++mostrarInfo(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>440</y><w>210</w><h>190</h></coordinates><panel_attributes>Autor
+--
+-id: String
+-nombre: String
+-nacionalidad: String
+--
++mostrarInfo(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>160</y><w>220</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>270</y><w>30</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element></diagram>
