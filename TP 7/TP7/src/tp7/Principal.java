@@ -6,6 +6,11 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
+        int facto=-3 ;
+        for (int i =facto-1 ;i>=1;i--){
+            facto *=i;
+        }
+        System.out.println("FACTO: "+facto);
         //////////////// 4. Animales y comportamiento sobrescrito
         ArrayList<Animal> animales = new ArrayList<>();
         
