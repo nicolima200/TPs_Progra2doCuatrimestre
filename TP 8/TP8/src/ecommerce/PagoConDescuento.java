@@ -1,5 +1,5 @@
 package ecommerce;
 
-public interface PagoConDescuento {
-    public double aplicarDescuento();
+public interface PagoConDescuento extends Pago{
+    public double aplicarDescuento(double monto);
 }

@@ -1,5 +1,5 @@
 package ecommerce;
 
 public interface Pago {
-    public double procesarPago();
+    public void procesarPago(double monto);
 }

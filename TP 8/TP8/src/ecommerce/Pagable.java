@@ -1,5 +1,5 @@
 package ecommerce;
 
 public interface Pagable {
-    public void calcularTotal();
+    public double calcularTotal();
 }

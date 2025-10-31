@@ -14,8 +14,7 @@ public class VisorDeTxt {
                 br = new BufferedReader(new FileReader(elArchivo));
                 System.out.println(br.readLine());
             } catch (FileNotFoundException fnfe) {
-                System.out.println("Error de archivo: " + fnfe.getMessage());
-                throw new RuntimeException("Error inesperado en el catch");
+                System.out.println("Error. El archivo no fue encontrado");
             }finally {
                 if(br != null){
                     try {

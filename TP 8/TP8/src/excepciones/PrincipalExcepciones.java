@@ -3,37 +3,47 @@ package excepciones;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Principal {
+public class PrincipalExcepciones {
 
     public static void main(String[] args) {
+        
         ///////////////////////////// 1. DIVISOR
         System.out.println("====DIVISION====");
-        int a,b,c;
+        double a,b,c;
         Scanner input=new Scanner(System.in);
         
         System.out.println("Ingrese el dividendo:");
-        a = Integer.parseInt(input.nextLine());
+        a = Double.parseDouble(input.nextLine());
 
         System.out.println("\nIngrese el divisor:");
-        b = Integer.parseInt(input.nextLine());
+        b = Double.parseDouble(input.nextLine());
         
         try{
+            if(b == 0){
+                throw new ArithmeticException("El divisor no puede ser cero.");
+            }
             c=a/b;
             System.out.println("RESULTADO: "+c);
         }catch(ArithmeticException ae){
-            System.out.println("El divisor no puede ser cero!");
+            System.out.println("Error: "+ae.getMessage());
         }
+        
+        System.out.print("Presione ENTER para continuar...");
+        input.nextLine();
         
         ///////////////////////////// 2. CONVERSIÓN DE CADENA A NÚMERO
         System.out.println("\n====CONVERSION====");
         System.out.println("\nIngrese un numero entero: ");
         try{
-            c= Integer.parseInt(input.nextLine());
-            System.out.println("String convertido exitosamente!");
+            int entero= Integer.parseInt(input.nextLine());
+            System.out.println("String convertido exitosamente: "+entero);
         }catch(NumberFormatException nfe){
             System.out.println("No es un entero! Ingrese un valor válido");
         }
         System.out.println("Adios");
+        
+        System.out.print("Presione ENTER para continuar...");
+        input.nextLine();
         
         ///////////////////////////// 3. LECTURA DE ARCHIVO
         //RUTA CORRECTA "C:\\Users\\nicol\\Documents\\2025 TUPaD\\2do cuatrimestre\\2-Programación 2\\Trabajos_practicos\\TP8\\src\\excepciones\\newfile.txt"
@@ -45,8 +55,12 @@ public class Principal {
             System.out.println("Hubo un error: "+ioe.getMessage());
         }
         
-        ///////////////////////////// 4. EDAD INVALIDA
-        System.out.println("\n====EDAD INVALIDA ====");
+        System.out.print("Presione ENTER para continuar...");
+        input.nextLine();
+        
+        ///////////////////////////// 4. EDAD
+        System.out.println("\n==== EDAD ====");
+        System.out.println("Ingrese edad: ");
         int edad = Integer.parseInt(input.nextLine());
         
         if(edad < 0 || edad > 120){
@@ -55,6 +69,9 @@ public class Principal {
         }else{
             System.out.println("Edad OK");
         }
+        
+        System.out.print("Presione ENTER para continuar...");
+        input.nextLine();
         
         ///////////////////////////// 5. TRY WITH RESOURCES
         System.out.println("\n====TRY WITH RESOURCES: ====");

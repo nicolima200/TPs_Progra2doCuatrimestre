@@ -2,24 +2,32 @@ package ecommerce;
 
 import java.util.ArrayList;
 
-public class Pedido implements Pagable, Pago, PagoConDescuento{
+public class Pedido implements Pagable{
     private ArrayList<Producto> productos;
+    private String estado;
+    private Cliente cliente;
 
-    @Override
-    public void calcularTotal() {
+    public Pedido(String estado, Cliente cliente) {
+        this.estado = estado;
+        this.cliente = cliente;
+        this.productos = new ArrayList<>();
     }
 
-    @Override
-    public double procesarPago() {
-        return 0.00;
-    }
-
-    @Override
-    public double aplicarDescuento() {
-        return 0.00;
+    public void agregarProducto(Producto producto){
+        productos.add(producto);
     }
     
-    public void notificarCliente(Cliente cliente, String notificacion){
-        cliente.setNotificacion(notificacion);
+    @Override
+    public double calcularTotal() {
+        double total=0;
+        for (Producto p : productos) {
+            total += p.getPrecio();
+        }
+        return total;
+    }
+    
+    public void notificarCliente(String notificacion){
+        this.estado=notificacion;
+        cliente.notificarCliente(notificacion);
     }
 }
